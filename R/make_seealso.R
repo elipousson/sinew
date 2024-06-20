@@ -6,7 +6,7 @@ make_seealso <- function(obj, cutOFF=3) {
     
     ret <- strsplit(gsub("\\n|@importFrom|^\\s+", "", y), " ")[[1]][-1]
     
-    if(sinew_opts$get('markdown_links')){
+    if(sinew_opts$get('markdown_links') || sinew_opts$get('markdown')){
       
       paste0(sprintf("[%s][%s::%s]", unique(ret[-1]), ret[1], unique(ret[-1])), collapse = ", ")
       

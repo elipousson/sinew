@@ -73,7 +73,7 @@ makeOxygen <- function(
     add_fields=sinew_opts$get("add_fields"),
     use_dictionary=NULL,
     use_labels=FALSE,
-    markdown=FALSE,
+    markdown=sinew_opts$get('markdown'),
     scope = c("full", "simple", "unlink", "indent", "none"),
     print=TRUE,
     copy=interactive(),

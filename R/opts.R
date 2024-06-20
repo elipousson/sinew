@@ -61,6 +61,7 @@ sinew_opts <- new_defaults(list(
   add_fields = c("details", "examples", "seealso", "rdname", "export"),
   cut = NULL,
   pretty_print = TRUE,
+  markdown = FALSE,
   markdown_links = FALSE,
   author = "AUTHOR [AUTHOR_2]",
   backref = "src/filename.cpp",
