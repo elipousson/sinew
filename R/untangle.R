@@ -49,7 +49,11 @@
 #' @concept untangle
 #' @author Jonathan Sidi
 #' @importFrom utils getParseData
-untangle <- function(file = "", text = NULL, dir.out = "", keep.body = TRUE, dir.body = dirname(dir.out)) {
+untangle <- function(file = "",
+                     text = NULL,
+                     dir.out = sinew_opts$get('R'),
+                     keep.body = TRUE,
+                     dir.body = dirname(dir.out)) {
   if (!is.null(text) & length(text) == 1) {
     text <- strsplit(text, "\n")[[1]]
   }
@@ -87,6 +91,9 @@ untangle <- function(file = "", text = NULL, dir.out = "", keep.body = TRUE, dir
   names(ret) <- lapply(p.split, function(x) x$name)
   
   # writing to disk
+  if (is.null(dir.out)) {
+    dir.out <- ""
+  }
   
   if (nzchar(dir.out)) {
     invisible({

@@ -96,7 +96,8 @@ sinew_opts <- new_defaults(list(
   slot = "SLOTNAME DESCRIPTION",
   template = "FILENAME",
   templateVar = "NAME VALUE",
-  useDynLib = "PKG [ROUTINE_a ROUTINE_b]"
+  useDynLib = "PKG [ROUTINE_a ROUTINE_b]",
+  R=NULL
 ))
 
 #' @rdname sinew_opts

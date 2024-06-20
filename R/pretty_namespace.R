@@ -39,7 +39,7 @@
 #' @concept namespace
 #' @export
 #' @author Jonathan Sidi
-pretty_namespace <- function(con = NULL,
+pretty_namespace <- function(con = sinew_opts$get('R'),
                              text = NULL,
                              ask = TRUE,
                              askenv = new.env(),
